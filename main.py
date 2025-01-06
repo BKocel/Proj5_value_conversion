@@ -10,6 +10,7 @@ def weightcalc(): # weight calculations
     print("5. Tona (T)")
     print("6. Uncja (oz.)")
     print("7. Funty (lb.)")
+    print("8. Uncja trojańska (troy oz.)")
     intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
     outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
 
@@ -21,6 +22,7 @@ def weightcalc(): # weight calculations
         case 5: gvalue = value * 1000000    # T to g
         case 6: gvalue = value * 28.3495231 # oz to g
         case 7: gvalue = value * 453.59237  # lb to g
+        case 8: gvalue = value * 31.1034768 # troy oz to g
         case _: print("Error") # wrong value handler
 
     match outtype: # converting grams to output value
@@ -31,9 +33,10 @@ def weightcalc(): # weight calculations
         case 5: outvalue = gvalue / 1000000     # g to T
         case 6: outvalue = gvalue / 28.3495231  # g to oz
         case 7: outvalue = gvalue / 453.59237   # g to lb
+        case 8: outvalue = gvalue / 31.1034768  # g to troy oz
         case _: print("Error")# wrong value handler
 
-    print(outvalue)
+    return(outvalue)
 
 
 def lenghtcalc(): # lenght calculations
@@ -48,6 +51,6 @@ print("3. Konwersja obiętości")
 opmode = int(input("Wybierz tryb pracy: "))
 
 match opmode:
-    case 1: weightcalc()
+    case 1: print(weightcalc())
     case 2: lenghtcalc()
-    case _: print()
+    case _: print("Error")
