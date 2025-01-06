@@ -40,14 +40,58 @@ def weightcalc(): # weight calculations
 
 
 def lenghtcalc(): # lenght calculations
-    print("Dostępne jednostki odległości")
+    value = float(input("Podaj wartość do przekonwertowania: "))
+    print("Dostępne jednostki odległości:")
+    print("1. mikrony (µ)")
+    print("2. milimetr (mm)")
+    print("3. centymetr (cm)")
+    print("4. decymetr (dm)")
+    print("5. metr (m)")
+    print("6. kilometr (km)")
+    print("7. cal (in)")
+    print("8. stopa (ft)")
+    print("9. jard (yd)")
+    print("10. mila (M)")
+    print("11. mila morska (Mn)")
+    intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
+    outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
+
+    match intype: # convering input unit to meters
+        case 1: mvalue = value / 1000000    # µ to m
+        case 2: mvalue = value / 1000       # mm to m 
+        case 3: mvalue = value / 100        # cm to m
+        case 4: mvalue = value / 10         # dm to m
+        case 5: mvalue = value              # m to m
+        case 6: mvalue = value * 1000       # km to m
+        case 7: mvalue = value * 0.0254     # in to m
+        case 8: mvalue = value * 0.3048     # ft to m
+        case 9: mvalue = value * 0.9144     # yd to m
+        case 10: mvalue = value * 1609.344  # M to m
+        case 11: mvalue = value * 1852      # Mn to m
+        case _: print("Error") # wrong value handler
+
+    match outtype: # converting meters to output unit
+        case 1: outvalue = mvalue * 1000000       # m to µ
+        case 2: outvalue = mvalue * 1000          # m to mm
+        case 3: outvalue = mvalue * 100           # m to cm
+        case 4: outvalue = mvalue * 10            # m to dm
+        case 5: outvalue = mvalue                 # m to m
+        case 6: mvalue = value / 1000             # m to km
+        case 7: mvalue = value / 0.0254           # m to in
+        case 8: mvalue = value / 0.3048           # m to ft
+        case 9: mvalue = value / 0.9144           # m to yd
+        case 10: mvalue = value / 1609.344        # m to M
+        case 11: mvalue = value / 1852            # m to Mn
+        case _: print("Error")# wrong value handler
+
+    return(outvalue)
 
 # CLI
 print("Witaj w konwerterze jednostek!")
 print("Tryby pracy aplikacji:")
 print("1. Konwersja wagi ")
 print("2. Konwersja odległości")
-print("3. Konwersja obiętości")
+print("3. Konwersja obiętości # TODO")
 opmode = int(input("Wybierz tryb pracy: "))
 
 match opmode:
