@@ -22,4 +22,23 @@ Po podaniu wyszstkich informacji program wypisuje użytkownikowi przekonwertowan
 
 #### Działanie programu:
 Użytkownik wybiera tryb pracy programu (kownertowwanie jednostek odległości lub masy), po czym podaje wartość początkową, jej jednostkę oraz jednostkę docelową, po czym program wypisuje wartość przekonwertowaną do jednostki docelowej.
- 
+
+ ```
+Witaj w konwerterze jednostek!
+Tryby pracy aplikacji:
+1. Konwertowanie wagi
+2. Konwertowanie odległości
+Wybierz tryb pracy: 1
+Podaj wartość do przekonwertowania: 1000
+Dostępne jednostki wagi
+1. Miliglram (mg)
+2. Gram (g)
+3. Dekagram (dag)
+4. Kilogram (Kg)
+5. Tona (T)
+6. Uncja (oz.)
+7. Funty (lb.)
+8. Uncja trojańska (troy oz.)
+Wybierz jednostkę  wpisanej wartości: 4
+Wybierz jednostkę wartości wypisywanej : 5
+```
