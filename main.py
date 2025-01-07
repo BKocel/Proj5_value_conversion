@@ -89,8 +89,8 @@ def lenghtcalc(): # lenght calculations
 # CLI
 print("Witaj w konwerterze jednostek!")
 print("Tryby pracy aplikacji:")
-print("1. Konwersja wagi ")
-print("2. Konwersja odległości")
+print("1. Konwertowanie wagi ")
+print("2. Konwertowanie odległości")
 opmode = int(input("Wybierz tryb pracy: "))
 
 match opmode:
