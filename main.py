@@ -86,36 +86,14 @@ def lenghtcalc(): # lenght calculations
 
     return(outvalue)
 
-def volumecalc(): # volume calculations
-    value = float(input("Podaj wartość do przekonwertowania: "))
-    print("Dostępne jednostki objętości:")
-    print("1. mikrony (µ)")
-    
-    intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
-    outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
-
-    match intype: # convering input unit to meters
-        case 1: mvalue = value / 1000000    # µ to m
-     
-        case _: print("Error") # wrong value handler
-
-    match outtype: # converting meters to output unit
-        case 1: outvalue = mvalue * 1000000       # m to µ
-
-        case _: print("Error")# wrong value handler
-
-    return(outvalue)
-
 # CLI
 print("Witaj w konwerterze jednostek!")
 print("Tryby pracy aplikacji:")
 print("1. Konwersja wagi ")
 print("2. Konwersja odległości")
-print("3. Konwersja obiętości # TODO")
 opmode = int(input("Wybierz tryb pracy: "))
 
 match opmode:
     case 1: print(weightcalc())
     case 2: print(lenghtcalc())
-    case 3: print(volumecalc())
     case _: print("Error")
