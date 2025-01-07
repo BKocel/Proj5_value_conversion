@@ -14,6 +14,7 @@ def weightcalc(): # weight calculations
     intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
     outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
 
+
     match intype: # convering input value to grams
         case 1: gvalue = value / 1000       # mg to g
         case 2: gvalue = value              # g to g
@@ -35,8 +36,10 @@ def weightcalc(): # weight calculations
         case 7: outvalue = gvalue / 453.59237   # g to lb
         case 8: outvalue = gvalue / 31.1034768  # g to troy oz
         case _: print("Error")# wrong value handler
-
-    return(outvalue)
+    if value == 0:
+        return(0)
+    else:
+        return(outvalue)
 
 
 def lenghtcalc(): # lenght calculations
@@ -84,7 +87,11 @@ def lenghtcalc(): # lenght calculations
         case 11: mvalue = value / 1852            # m to Mn
         case _: print("Error")# wrong value handler
 
-    return(outvalue)
+    if value == 0:
+        return(0)
+    else:
+        return(outvalue)
+
 
 # CLI
 print("Witaj w konwerterze jednostek!")
