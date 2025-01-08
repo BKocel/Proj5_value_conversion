@@ -38,7 +38,7 @@ Dostępne jednostki wagi
 5. Tona (T)
 6. Uncja (oz.)
 7. Funty (lb.)
-8. Uncja trojańska (troy oz.)
+8. Uncja trojańska (troy ozt. )
 Wybierz jednostkę  wpisanej wartości: 4
 Wybierz jednostkę wartości wypisywanej : 5
 ```
