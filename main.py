@@ -14,8 +14,8 @@ def weightcalc(): # weight calculations
     intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
     outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
 
-    if value == 0:
-        return(0)
+    if value <= 0:
+        print("Błędna wartość!")
     else:
         
 
@@ -60,8 +60,9 @@ def lenghtcalc(): # lenght calculations
     intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
     outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
 
-    if value == 0:
-        return(0)
+    if value <= 0:
+        print("Błędna wartość!")
+        
     else:
 
         match intype: # convering input unit to meters
