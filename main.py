@@ -10,7 +10,7 @@ def weightcalc(): # weight calculations
     print("5. Tona (T)")
     print("6. Uncja (oz.)")
     print("7. Funty (lb.)")
-    print("8. Uncja trojańska (troy oz.)")
+    print("8. Uncja trojańska ( ozt.)")
     intype = int(input("Wybierz jednostkę  wpisanej wartości: "))
     outtype = int(input("Wybierz jednostkę wartości wypisywanej : "))
 
